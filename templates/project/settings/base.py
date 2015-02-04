@@ -52,7 +52,7 @@ DEV = False
 ########## MANAGER CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#admins
 ADMINS = (
-    ('<%= _.capitalize(adminName) %>', '<%= adminEmail %>'),
+    ("<%= _.capitalize(adminName) %>", '<%= adminEmail %>'),
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#managers

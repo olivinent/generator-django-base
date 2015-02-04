@@ -8,3 +8,10 @@ end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
+
+# 4 space indentation for Python
+[*.py]
+indent_size = 4
+
+[*.md]
+trim_trailing_whitespace = false

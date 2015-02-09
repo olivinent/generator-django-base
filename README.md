@@ -25,10 +25,10 @@ Install `generator-django-base` from npm:
 npm install -g generator-django-base
 ```
 
-Make a virtualenv and `cd` into it:
+Make a virtualenv and `activate` it:
 ```
 virtualenv myproject --no-site-packages
-cd myproject
+source myproject/bin/activate
 ```
 
 Make your project directory and `cd` into it:

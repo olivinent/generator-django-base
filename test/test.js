@@ -2,13 +2,9 @@
 
 var path    = require('path');
 var helpers = require('yeoman-generator').test;
-var assert = require('assert');
+var assert = require('yeoman-generator').assert;
 
 describe('Django base generator test', function () {
-  var mockPrompts = {
-    database: 'sqlite3',
-  };
-
   beforeEach(function (done) {
     helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
       if (err) {
@@ -58,7 +54,7 @@ describe('Django base generator test', function () {
 
     this.app.options['skip-install'] = true;
     this.app.on('end', function() {
-      helpers.assertFiles(expected);
+      assert.file(expected);
       done();
     }).run({}, function(){});
   });

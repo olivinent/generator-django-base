@@ -1,8 +1,11 @@
 # Local development dependencies go here
 -r test.txt
 
-# Deployment
-Fabric
-
 # Documentation
 Sphinx
+
+# Debugging
+django-debug-toolbar
+
+# Code quality checker
+prospector

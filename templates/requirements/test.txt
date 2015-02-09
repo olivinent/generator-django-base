@@ -3,3 +3,7 @@
 
 # Testing
 coverage
+django-libs
+django-nose
+factory-boy
+selenium

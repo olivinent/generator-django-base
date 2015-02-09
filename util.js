@@ -1,17 +1,11 @@
 'use strict';
+var cr = require('crypto');
 
 function generateRandomString() {
-    var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
-    var string_length = 50;
-    var randomstring = '';
-
-    for (var i = 0; i < string_length; i++) {
-        var rnum = Math.floor(Math.random() * chars.length);
-        randomstring += chars.substring(rnum,rnum+1);
-    }
-    return randomstring;
+  // generates a random 50 character string
+  return cr.randomBytes(25).toString('hex');
 }
 
 module.exports = {
-    generateRandomString: generateRandomString
+  generateRandomString: generateRandomString
 };

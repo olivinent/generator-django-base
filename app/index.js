@@ -30,7 +30,7 @@ var DjangoGenerator = module.exports = function DjangoGenerator(args, options, c
                         .write()
                         .info("To start the server please follow these steps:")
                         .info("Enter in your project folder: cd " + this.projectName)
-                        .info("Run: python manage.py syncdb")
+                        .info("Run: python manage.py migrate")
                         .info("Run: python manage.py runserver")
                         .write();
                 }.bind(this));

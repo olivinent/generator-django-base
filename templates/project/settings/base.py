@@ -43,9 +43,6 @@ DEBUG = False
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-debug
 TEMPLATE_DEBUG = DEBUG
 
-# Is this a development instance? Set this to True on development/master
-# instances and False on stage/prod.
-DEV = False
 ########## END DEBUG CONFIGURATION
 
 

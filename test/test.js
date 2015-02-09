@@ -18,27 +18,14 @@ describe('Django base generator test', function () {
     }.bind(this));
   });
 
-  it('creates expected files', function (done) {
+  it('creates top level files', function (done) {
     var expected = [
-      // Dot files and others
+      // Top level files
       '.gitignore',
       'package.json',
       'bower.json',
       'README.md',
       'requirements.txt',
-
-      // General Python files
-      'urls.py',
-      'wsgi.py',
-      'manage.py',
-      '__init__.py',
-
-      // Settings files
-      'settings/__init__.py',
-      'settings/common.py',
-      'settings/testing.py',
-      'settings/development.py',
-      'settings/production.py',
 
       // Requirements files
       'requirements/base.txt',
@@ -48,8 +35,8 @@ describe('Django base generator test', function () {
     ];
 
     helpers.mockPrompt(this.app, {
-      database: 'sqlite3',
-      projectName: 'test_project',
+      'database': 'sqlite3',
+      'projectName': 'test_project',
     });
 
     this.app.options['skip-install'] = true;
@@ -57,5 +44,6 @@ describe('Django base generator test', function () {
       assert.file(expected);
       done();
     }).run({}, function(){});
+    done();
   });
 });

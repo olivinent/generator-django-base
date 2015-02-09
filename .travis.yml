@@ -1,6 +1,11 @@
 language: node_js
 node_js:
-  - '0.10'
+- '0.10'
 before_install:
-  - currentfolder=${PWD##*/}
-  - if [ "$currentfolder" != 'generator-django-base' ]; then cd .. && eval "mv $currentfolder generator-django-base" && cd generator-django-base; fi
+- currentfolder=${PWD##*/}
+- if [ "$currentfolder" != 'generator-django-base' ]; then cd .. && eval "mv $currentfolder
+  generator-django-base" && cd generator-django-base; fi
+notifications:
+  email: false
+  slack:
+    secure: D7HSdFAAq0nMrzdiA66R2RCWNMgElDMMiF/3jf9L5Axovqm6/Rwikn4ocJ15MN+h+jw4mlP7VVjjEGBsZRm819O4nTqul3EqRKe3xFT84b9zaSvnwhYQngtPV1M0GPj9SBeMY2P4pAdLt4b98iPZ0aTqonm+vHRHaoqwJHVT+Zg=

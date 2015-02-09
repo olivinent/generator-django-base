@@ -1,15 +1,13 @@
 from __future__ import absolute_import
 
+import dj_database_url
+
 from .base import *
 
-########## DEBUG CONFIGURATION
-# See: https://docs.djangoproject.com/en/dev/ref/settings/#debug
+
 DEBUG = False
 
-# See: https://docs.djangoproject.com/en/dev/ref/settings/#template-debug
 TEMPLATE_DEBUG = DEBUG
-
-########## END DEBUG CONFIGURATION
 
 ########## HOST CONFIGURATION
 # See: https://docs.djangoproject.com/en/1.5/releases/1.5/#allowed-hosts-required-in-production
@@ -41,7 +39,7 @@ SERVER_EMAIL = EMAIL_HOST_USER
 ########## END EMAIL CONFIGURATION
 
 ########## DATABASE CONFIGURATION
-DATABASES = {}
+DATABASES = {'default': dj_database_url.parse(get_env_setting('DATABASE_URL'))}
 ########## END DATABASE CONFIGURATION
 
 
